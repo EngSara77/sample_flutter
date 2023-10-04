@@ -3,6 +3,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:sample_flutter/controllers/laztloading_controller.dart';
+import 'package:sample_flutter/widgets/home_view.dart';
 import 'package:sample_flutter/widgets/lazyloading.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       onInit: () => {
 
-        Get.put(LazyLoadingController()),
+       // Get.put(LazyLoadingController()),
       },
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -27,9 +28,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  Directionality(
+      home:  const Directionality(
         textDirection: TextDirection.rtl,
-        child: LazyLoading()),
+        child: HomeView()),
     );
   }
 }
