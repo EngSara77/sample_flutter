@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:sample_flutter/widgets/home_view.dart';
+import 'package:sample_flutter/widgets/report/report_home_view.dart';
 
 
 void main() {
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       ),
       home:  const Directionality(
         textDirection: TextDirection.rtl,
-        child: HomeView()),
+        child: ReportHomeView()),
     );
   }
 }
