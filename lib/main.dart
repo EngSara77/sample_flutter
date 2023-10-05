@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:sample_flutter/controllers/laztloading_controller.dart';
 import 'package:sample_flutter/widgets/home_view.dart';
-import 'package:sample_flutter/widgets/lazyloading.dart';
+
 
 void main() {
   runApp(const MyApp());

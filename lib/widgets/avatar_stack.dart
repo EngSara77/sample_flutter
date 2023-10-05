@@ -1,6 +1,7 @@
+
 import 'package:avatar_stack/avatar_stack.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 
 class AvatarStackWidget extends StatelessWidget {
   const AvatarStackWidget({super.key});
@@ -24,15 +25,7 @@ class AvatarStackWidget extends StatelessWidget {
                     context: context,
                      builder: (BuildContext context)  {
                         
-                      return SizedBox(
-                        height: 400,
-                        child: Center(child:
-                        ElevatedButton(child: const Text('close'),
-                        onPressed: (){
-                          Navigator.pop(context);
-                        },
-                        ) ),
-                      );
+                     return showAvatarDetail();
 
                     }); },
                
@@ -49,4 +42,42 @@ class AvatarStackWidget extends StatelessWidget {
         ),
       );
   }
+  
+  Widget showAvatarDetail()=>
+
+
+
+  
+      
+        Column(
+
+          mainAxisAlignment: MainAxisAlignment.start,
+        
+          children: [
+            const Text('گروه امضا : گروه گنگ'),
+            ListView.separated(itemCount: 15,
+            scrollDirection: Axis.vertical,
+             shrinkWrap: true,
+            itemBuilder:(context,index){
+              
+              return  Directionality(
+                textDirection: TextDirection.rtl,
+                child: ListTile(
+                  leading: CircleAvatar(
+                    radius: 25,
+                    backgroundImage: NetworkImage('https://i.pravatar.cc/150?img=$index'),
+                  ),
+                  title: const Text('سارا شرف بیانی'),
+                  subtitle: const Text('مسئول قسمت'),
+                ),
+              );
+            }, 
+            separatorBuilder: (context,index){
+            
+              return const SizedBox(height: 8,);
+            }, ),
+          ],
+        );
 }
+   
+

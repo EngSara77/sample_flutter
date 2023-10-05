@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:sample_flutter/widgets/avatar_example.dart';
 import 'package:sample_flutter/widgets/avatar_stack.dart';
 
 class HomeView extends StatelessWidget {
