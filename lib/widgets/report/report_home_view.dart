@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sample_flutter/widgets/report/report_body_widget.dart';
+import 'package:sample_flutter/widgets/mission_report_view.dart';
+
 
 class ReportHomeView extends StatelessWidget {
   const ReportHomeView({super.key});
@@ -9,7 +10,7 @@ class ReportHomeView extends StatelessWidget {
     return Scaffold(
 
       appBar: AppBar(title: const Text('گزارش ماموریت'),centerTitle: true,),
-      body: const ReportBodyWidget(),
+      body: const MissionReportView(),
     
     );
   }

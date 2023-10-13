@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/instance_manager.dart';
+import 'package:sample_flutter/controllers/laztloading_controller.dart';
+import 'package:sample_flutter/controllers/mission_report_controller.dart';
 import 'package:sample_flutter/widgets/report/report_home_view.dart';
 
 
@@ -16,7 +19,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       onInit: () => {
 
-       // Get.put(LazyLoadingController()),
+       Get.put(LazyLoadingController()),
+       Get.lazyPut(() => MissionReportController()),
       },
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
