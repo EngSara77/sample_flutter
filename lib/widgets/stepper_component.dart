@@ -22,7 +22,9 @@ class StepperComponent extends StatelessWidget {
           GestureDetector(
             //onTap: onTapFunc,
             child: SvgPicture.asset(svgName,color: currentIndex==index? Colors.blue:currentIndex>index? Colors.green:Colors.grey,)),
-            Expanded(child: Container(height: 2,color:currentIndex==index? Colors.blue:currentIndex>index? Colors.green:Colors.grey,))
+         SvgPicture.asset('assets/svgs/line.svg',width: 30,),
+            const Divider(height: 20,color: Colors.blue,),
+            //Expanded(child: Container(height: 2,color:currentIndex==index? Colors.blue:currentIndex>index? Colors.green:Colors.grey,))
       
       ],
             ), 
